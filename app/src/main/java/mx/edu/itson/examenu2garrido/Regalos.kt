@@ -1,6 +1,7 @@
 package mx.edu.itson.examenu2garrido
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -72,35 +73,35 @@ class Regalos : AppCompatActivity() {
     fun agregarDetalles() {
         detalles.add(Detalles(R.drawable.cumplebotanas, "Cumple Botanas", "$100"))
         detalles.add(Detalles(R.drawable.cumplecheve, "Cumple Cheve", "$200"))
-        detalles.add(Detalles(R.drawable.cumpleescolar, "Cumple Escolar", "250"))
-        detalles.add(Detalles(R.drawable.cumplepaletas, "Cumple Paletas", "300"))
-        detalles.add(Detalles(R.drawable.cumplesnack, "Cumple Snack", "350"))
-        detalles.add(Detalles(R.drawable.cumplevinos, "Cumple Vinos", "400"))
+        detalles.add(Detalles(R.drawable.cumpleescolar, "Cumple Escolar", "$250"))
+        detalles.add(Detalles(R.drawable.cumplepaletas, "Cumple Paletas", "$300"))
+        detalles.add(Detalles(R.drawable.cumplesnack, "Cumple Snack", "$350"))
+        detalles.add(Detalles(R.drawable.cumplevinos, "Cumple Vinos", "$400"))
 
-        globos.add(Detalles(R.drawable.globos,"Globos","100"))
-        globos.add(Detalles(R.drawable.globoamor,"Globo Amor","150"))
-        globos.add(Detalles(R.drawable.globocumple,"Globo Cumple","200"))
-        globos.add(Detalles(R.drawable.globonum,"Globo Num","250"))
-        globos.add(Detalles(R.drawable.globofestejo,"Globo Festejo","300"))
-        globos.add(Detalles(R.drawable.globoregalo,"Globo Regalo","350"))
+        globos.add(Detalles(R.drawable.globos,"   Globos","$100"))
+        globos.add(Detalles(R.drawable.globoamor,"Globo Amor","$150"))
+        globos.add(Detalles(R.drawable.globocumple,"Globo Cumple","$200"))
+        globos.add(Detalles(R.drawable.globonum,"Globo Num","$250"))
+        globos.add(Detalles(R.drawable.globofestejo,"Globo Festejo","$300"))
+        globos.add(Detalles(R.drawable.globoregalo,"Globo Regalo","$350"))
 
-        peluches.add(Detalles(R.drawable.peluches,"Peluches","100"))
-        peluches.add(Detalles(R.drawable.peluchemario,"Peluche Mario","150"))
-        peluches.add(Detalles(R.drawable.pelucheminecraft,"Peluche Minecraft","200"))
-        peluches.add(Detalles(R.drawable.peluchepeppa,"Peluche Peppa","250"))
-        peluches.add(Detalles(R.drawable.peluchesony,"Peluche Sony","300"))
-        peluches.add(Detalles(R.drawable.peluchestich,"Peluche Stich","350"))
-        peluches.add(Detalles(R.drawable.peluchevarios,"Peluche Varios","400"))
+        peluches.add(Detalles(R.drawable.peluches,"Peluches","$100"))
+        peluches.add(Detalles(R.drawable.peluchemario,"Peluche Mario","$150"))
+        peluches.add(Detalles(R.drawable.pelucheminecraft,"Peluche Minecraft","$200"))
+        peluches.add(Detalles(R.drawable.peluchepeppa,"Peluche Peppa","$250"))
+        peluches.add(Detalles(R.drawable.peluchesony,"Peluche Sony","$300"))
+        peluches.add(Detalles(R.drawable.peluchestich,"Peluche Stich","$350"))
+        peluches.add(Detalles(R.drawable.peluchevarios,"Peluche Varios","$400"))
 
-        regalos.add(Detalles(R.drawable.regalos,"Regalos","100"))
-        regalos.add(Detalles(R.drawable.regalobebe,"Regalo Bebe","150"))
-        regalos.add(Detalles(R.drawable.regaloazul,"Regalo Azul","200"))
-        regalos.add(Detalles(R.drawable.regalocajas,"Regalo Cajas","250"))
-        regalos.add(Detalles(R.drawable.regalocolores,"Regalo Colores","300"))
-        regalos.add(Detalles(R.drawable.regalovarios,"Regalo Varios","350"))
+        regalos.add(Detalles(R.drawable.regalos,"  Regalos","$100"))
+        regalos.add(Detalles(R.drawable.regalobebe,"Regalo Bebe","$150"))
+        regalos.add(Detalles(R.drawable.regaloazul,"Regalo Azul","$200"))
+        regalos.add(Detalles(R.drawable.regalocajas,"Regalo Cajas","$250"))
+        regalos.add(Detalles(R.drawable.regalocolores,"Regalo Colores","$300"))
+        regalos.add(Detalles(R.drawable.regalovarios,"Regalo Varios","$350"))
 
 
-        tazas.add(Detalles(R.drawable.tazas,"Tazas ","100"))
+        tazas.add(Detalles(R.drawable.tazas,"   Tazas ","100"))
         tazas.add(Detalles(R.drawable.tazalove,"Taza Love ","150"))
         tazas.add(Detalles(R.drawable.tazaabuela,"Taza Abuela","200"))
         tazas.add(Detalles(R.drawable.tazaquiero,"Taza Quiero","250"))
@@ -140,6 +141,13 @@ class Regalos : AppCompatActivity() {
             var titulo=vista.findViewById(R.id.tv_regalo_titulo)as TextView
             var precio=vista.findViewById(R.id.tv_regalo_precio) as TextView
 
+            imagen.setOnClickListener {
+                val intet = Intent(context, DetalleRegalos::class.java)
+                intet.putExtra("image", regal.image)
+                intet.putExtra("titulo", regal.titulo)
+                intet.putExtra("precio", regal.precio)
+                context!!.startActivity(intet)
+            }
             imagen.setImageResource(regal.image)
             titulo.setText(regal.titulo)
             precio.setText(regal.precio)
