@@ -19,46 +19,52 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/botonP"
+            android:id="@+id/btn_detalles"
             android:layout_width="237dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/round_button"
-            android:text="Detalles"/>
+            android:text="Detalles"
+            android:textSize="@dimen/menu_buttons_text" />
 
         <Button
-            android:id="@+id/botonP"
+            android:id="@+id/btn_globos"
             android:layout_width="237dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             android:background="@drawable/round_button"
-            android:text="Globos"/>
+            android:text="Globos"
+            android:textSize="@dimen/menu_buttons_text" />
+
         <Button
-            android:id="@+id/botonP"
+            android:id="@+id/btn_peluches"
             android:layout_width="237dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             android:background="@drawable/round_button"
-            android:text="Peluches"/>
+            android:text="Peluches"
+            android:textSize="@dimen/menu_buttons_text" />
         <Button
-            android:id="@+id/botonP"
+            android:id="@+id/btn_regalos"
             android:layout_width="237dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             android:background="@drawable/round_button"
-            android:text="Regalos"/>
+            android:text="Regalos"
+            android:textSize="@dimen/menu_buttons_text" />
         <Button
-            android:id="@+id/botonP"
+            android:id="@+id/btn_tazas"
             android:layout_width="237dp"
-            android:layout_height="39dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             android:background="@drawable/round_button"
-            android:text="Tazas"/>
+            android:text="Tazas"
+            android:textSize="@dimen/menu_buttons_text" />
 
 
     </LinearLayout>

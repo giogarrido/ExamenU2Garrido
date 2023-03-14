@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/iv_logo"
-        android:layout_width="375dp"
+        android:layout_width="match_parent"
         android:layout_height="328dp"
-        app:srcCompat="@drawable/happybox"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/happybox"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="75dp" />
 
     <Button
         android:id="@+id/btn_visitar"
         android:layout_width="259dp"
-        android:layout_height="56dp"
+        android:layout_height="90dp"
         android:background="@drawable/round_button"
         android:text="Visitar"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="510dp" />
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+ />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
