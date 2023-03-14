@@ -3,17 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".DetalleRegalos">
 
     <ImageView
 
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:src="@drawable/cumplebotanas"
+        android:id="@+id/iv_regalo_imagen"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
         android:layout_marginTop="@dimen/menu_buttons_paddings"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="@dimen/menu_buttons_paddings"
+        android:src="@drawable/cumplebotanas"
+/>
 
 
     <LinearLayout
@@ -30,7 +33,7 @@
             android:paddingEnd="70dp"
             android:textColor="@color/pink"
             android:textSize="@dimen/menu_buttons_text"
-            android:text="cumple"/>
+            android:text="titulo"/>
 
         <TextView
             android:id="@+id/tv_regalo_precio"
